@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
 import Insta from "./pages/Insta";
+import InstaToken from "./pages/InstaToken";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -47,7 +48,7 @@ const App = () => {
             path="/insta/*"
             element={<Insta />}
           />
-					{/* <Route path="/insta/auth" element={<Insta />} /> */}
+					<Route path="/insta-token/*" element={<InstaToken />} />
 				</Routes>
 			</div>
 		</BrowserRouter>
