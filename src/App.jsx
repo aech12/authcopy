@@ -3,6 +3,7 @@ import "./app.css";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
+import Instagram from "./pages/Instagram";
 import Insta from "./pages/Insta";
 import InstaToken from "./pages/InstaToken";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -44,10 +45,8 @@ const App = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
 					<Route path="/post/:id" element={user ? <Post /> : <Navigate to="/login" />} />
-					<Route
-            path="/insta/*"
-            element={<Insta />}
-          />
+					<Route path="/insta/*" element={<Insta />} />
+					<Route path="/instagram/*" element={<Instagram />} />
 					<Route path="/insta-token/*" element={<InstaToken />} />
 				</Routes>
 			</div>
